@@ -1,0 +1,25 @@
+package es.pildoras.IoC.UsoEmpleados;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import es.pildoras.IoC.Empleados;
+import es.pildoras.IoC.SecretarioEmpleado;
+
+@SpringBootApplication
+public class UsoEmpleadosApplication {
+
+	public static void main(String[] args) {
+						
+		//Creacion de objetos tipo Empleado
+				
+		Empleados Empleado1 = new SecretarioEmpleado();//Es del tipo JefeEmpleado pero usamos la interfaz
+						
+				
+		//Uso objetos creados
+		System.out.println(Empleado1.getTareas());
+
+		//SpringApplication.run(UsoEmpleadosApplication.class, args);
+	}
+
+}

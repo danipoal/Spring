@@ -1,0 +1,13 @@
+package es.pildoras.IoC.UsoEmpleados;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class UsoEmpleadosApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(UsoEmpleadosApplication.class, args);
+	}
+
+}
