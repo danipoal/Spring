@@ -1,7 +1,0 @@
-package es.pildoras.IoC;
-
-//Interfaz para aplicar abstraccion
-public interface Empleados {
-
-	public String getTareas();
-}

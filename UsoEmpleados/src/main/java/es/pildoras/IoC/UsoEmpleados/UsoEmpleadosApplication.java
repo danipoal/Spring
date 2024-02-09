@@ -15,17 +15,22 @@ public class UsoEmpleadosApplication {
 						
 				
 		//Uso objetos creados
-		System.out.println(Empleado1.getTareas());
+		//System.out.println(Empleado1.getTareas());
 		
 		//--------BEANS--------
 			//Se usan para que un objeto de un tipo de clase/interfaz, pueda usar metodos de otras clases sin tener que crearlas si esta en esa interfaz
 		
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
 		//Al empleado Juan le damos el contexto especificado, de miEmpleado(Como esta en el XML y con la class de la interfaz)
-		Empleados Juan = contexto.getBean("miEmpleado", Empleados.class);
+		//Es del tipo Empleados pero puede usar cualquier metodo de las clases que especifiquemos en el bean
+		/*Empleados Juan = contexto.getBean("miEmpleado", Empleados.class);
 		
 		System.out.println(Juan.getTareas());
+		System.out.println(Juan.getInforme());*/
 		
+		Empleados Maria = contexto.getBean("miSecretarioEmpleado", Empleados.class);
+		System.out.println(Maria.getInforme());
+
 		contexto.close();	//Cerrar XML
 		
 		
