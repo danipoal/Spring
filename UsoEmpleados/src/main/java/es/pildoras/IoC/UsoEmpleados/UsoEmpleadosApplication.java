@@ -29,8 +29,11 @@ public class UsoEmpleadosApplication {
 		System.out.println(Juan.getInforme());*/
 		
 		Empleados Maria = contexto.getBean("miSecretarioEmpleado", Empleados.class);
-		System.out.println(Maria.getInforme());
-
+		//System.out.println(Maria.getInforme());
+		
+		//Le pedimos ahora una propiedad pero que no esta implementada en Empleados por tanto no podemos llamarla tal cual
+		SecretarioEmpleado Jorge = contexto.getBean("miSecretarioEmpleado", SecretarioEmpleado.class);
+		System.out.println("El correo es " + Jorge.getNombreEmpresa());
 		contexto.close();	//Cerrar XML
 		
 		

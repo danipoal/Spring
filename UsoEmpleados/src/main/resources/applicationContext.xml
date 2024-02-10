@@ -7,6 +7,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:property-placeholder location="classpath:datosEmpresa.propiedades"/>
 
 <!-- Para copiar la ruta, vas encima de la clase, copy qualified name-->
 	<bean id="miInforme" class="es.pildoras.IoC.UsoEmpleados.Informe"></bean>
@@ -16,5 +17,9 @@
     </bean>
 	<bean id="miSecretarioEmpleado" class="es.pildoras.IoC.UsoEmpleados.SecretarioEmpleado">
 		<property name="informeNuevo" ref="miInforme"></property>
+		<!-- Ahora añadimos las propiedades para los campos email y nombreEmpresa que hay geters i seters-->
+		<property name="email" value="secretario@google.es"></property>
+		<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
+
 	</bean>
 </beans>

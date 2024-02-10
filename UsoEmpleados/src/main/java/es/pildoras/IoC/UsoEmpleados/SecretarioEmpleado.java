@@ -20,5 +20,27 @@ public class SecretarioEmpleado implements Empleados {
 		// TODO Auto-generated method stub
 		return "Informe generado por el secretario" + informeNuevo.getInforme();
 	}
+	
+	//Ahora queremos inyectar dos campos
+	private String email;
+	private String nombreEmpresa;
 
+	//Auto generamos geters i seters
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
+	}
+	
+	
 }
