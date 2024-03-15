@@ -1,10 +1,10 @@
-package danipoal.JWTAuth;
+package dani.login1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JwtAuthApplicationTests {
+class Login1ApplicationTests {
 
 	@Test
 	void contextLoads() {
